@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="esp32_utilities_companion.SerialPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:esp32_utilities_companion"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid x:Name="ConnectionPanel" Grid.Row="0" Grid.Column="0" Width="200" HorizontalAlignment="Left">
+
+            <ListBox x:Name="SerialDevices" VerticalContentAlignment="Stretch" Grid.Row="0" Grid.Column="0" SizeChanged="SerialDevices_SizeChanged" Margin="0,0,0,50" />
+            <Grid x:Name="ConnectionButtons" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" Margin="0,0,0,5">
+                <Button x:Name="Connect" HorizontalAlignment="Left" Width="95" Click="Connect_Click">Connect</Button>
+                <Button x:Name="Refresh" HorizontalAlignment="Right" Width="95" Click="Refresh_Click">Refresh</Button>
+            </Grid>
+
+        </Grid>
+        <Grid x:Name="DebugBoxPanel" Grid.Row="0" HorizontalAlignment="Left" Width="595" Margin="205,0,5,5">
+            <ListBox x:Name="DebugBox" Grid.Row="0" Grid.Column="0" Margin="0,0,0,45">
+
+            </ListBox>
+            <Grid Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,10,0,0">
+                <Button x:Name="ClearBox" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="494,0,0,0" >Clear</Button>
+                <CheckBox x:Name="UpdateDebugBox" VerticalAlignment="Center" HorizontalAlignment="Left">Update Display?</CheckBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
